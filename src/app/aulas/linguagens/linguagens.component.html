@@ -7,78 +7,38 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="container-fluid">
-        <li class="navbar-nav">
-          <p [routerLink]="['']">E D U C A Í</p>
-        </li>
-      </div>
-    </nav>
-  </header>
-
   <div>
     <div>
       <p class="voltar" [routerLink]="['/aulas']"><img src="../../../assets/images/back-icon.png" alt=""></p>
       <p class="titulo">LINGUAGENS</p>
       <div class="container materias-grid">
         <div class="row">
-          <div class="col-sm">
-            <p (click)="alteraMateria('Portugues')">
+          <div class="col-sm" [ngStyle]="selecionado('Português') ? {'background-color': 'orange' } : {}">
+            <p (click)="alteraTema('Português')">
               Português
             </p>
           </div>
-          <div class="col-sm">
-            <p (click)="alteraMateria('Ingles')">
+          <div class="col-sm" [ngStyle]="selecionado('Inglês') ? {'background-color': 'orange' } : {}">
+            <p (click)="alteraTema('Inglês')">
               Inglês
             </p>
           </div>
-          <div class="col-sm">
-            <p (click)="alteraMateria('Espanhol')">
+          <div class="col-sm" [ngStyle]="selecionado('Espanhol') ? {'background-color': 'orange' } : {}">
+            <p (click)="alteraTema('Espanhol')">
               Espanhol
             </p>
           </div>
         </div>
       </div>
-      <div *ngIf="materiaSelecionada == 'Portugues'">
-        <app-materia [materia]="materia"></app-materia>
+      <div *ngIf="temaSelecionado == 'Português'">
+        <app-materia [tema]="tema"></app-materia>
       </div>
-      <div *ngIf="materiaSelecionada == 'Ingles'">
-        <app-materia [materia]="materia"></app-materia>
+      <div *ngIf="temaSelecionado == 'Inglês'">
+        <app-materia [tema]="tema"></app-materia>
       </div>
-      <div *ngIf="materiaSelecionada == 'Espanhol'">
-        <app-materia [materia]="materia"></app-materia>
-      </div>
-    </div>
-  </div>
-  <div class="info_educai">
-    <div class="row">
-      <div class="col">
-        <h4>
-          <p>E D U C A Í</p>
-        </h4>
-        <p></p>
-      </div>
-      <div class="col">
-        <p>
-          <a href="https://www.facebook.com/EtecRP" target="_blank">
-            <img src="../../assets/images/fbicon.png" alt="">
-          </a>
-          <a href="https://www.youtube.com/watch?v=LAbnr1jTtI8" target="_blank">
-            <img src="../../assets/images/wppicon.png" alt="">
-          </a>
-        </p>
-      </div>
-      <div class="col">
-        <h4>
-          <p>Fale Conosco</p>
-        </h4>
-        <p></p>
+      <div *ngIf="temaSelecionado == 'Espanhol'">
+        <app-materia [tema]="tema"></app-materia>
       </div>
     </div>
   </div>
-  <footer>
-    <p class="footer">&copy; SITE TCC | ETEC</p>
-  </footer>
-
 </body>

@@ -12,7 +12,8 @@ body {
 .navbar-login {
     cursor: pointer;
     font-size: 150%;
-    padding-left: 60%;
+    margin-left: 42%;
+    margin-right: 2%;
 }
 
 .navbar-login:hover {
@@ -20,9 +21,24 @@ body {
     transition: 0.2s;
 }
 
+.navbar-aulas {
+    cursor: pointer;
+    background: rgba(255, 1, 1, 0.838);
+    border-radius: 60px;
+    width: 8%;
+    text-align: center;
+}
+
+.navbar-aulas:hover {
+    background: rgba(255, 1, 1, 0.701);
+    color: white;
+    transition: 0.5s;
+}
+
 .navbar-educai {
     cursor: pointer;
     font-size: 250%;
+    padding-right: 2%;
 }
 
 .navbar-educai:hover {
@@ -32,13 +48,15 @@ body {
 
 .navbar-cadastro {
     cursor: pointer;
-    background: orange;
+    background: rgba(255, 166, 0, 0.963);
+    width: 16%;
+    text-align: center;
     border-radius: 60px;
 }
 
 .navbar-cadastro:hover {
-    background: white;
-    color: orange;
+    background: rgba(255, 166, 0, 0.813);
+    color: white;
     transition: 0.5s;
 }
 
@@ -49,7 +67,7 @@ body {
     justify-content: center;
     text-align: center;
     font-size: 18px;
-    padding-bottom: 70px;
+    padding-bottom: 2%;
 }
 
 .title_resumo {
@@ -99,8 +117,8 @@ body {
 .info_educai {
     background-color: gray;
     text-align: center;
-    padding-bottom: 10px;
-    padding-top: 50px;
+    padding-bottom: 5%;
+    padding-top: 15%;
     color: white;
 }
 

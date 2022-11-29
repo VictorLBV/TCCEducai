@@ -4,6 +4,8 @@ import { Materia } from 'src/app/Models/materia';
 import { Professor } from 'src/app/Models/professor';
 import { Tema } from 'src/app/Models/tema';
 import { DisciplinaService } from 'src/app/services/disciplina.service';
+import { ProfessorService } from 'src/app/services/professor.service';
+import { TemaService } from 'src/app/services/tema.service';
 
 @Component({
   selector: 'app-matematica',
@@ -11,7 +13,7 @@ import { DisciplinaService } from 'src/app/services/disciplina.service';
   styleUrls: ['./matematica.component.scss']
 })
 export class MatematicaComponent implements OnInit {
-  temaSelecionado:string = 'Geometria';
+  //temaSelecionado:string = 'Geometria';
   // professoresGeometria: Professor[] = [new Professor("João", 30, 16123456789, "joao@hotmail.com"), new Professor("Pedro", 35, 19098765432, "pedro@gmail.com"), new Professor("Ataide", 35, 19098765432, "ataide@outlook.com"),new Professor("Ribamar", 35, 19098765432, "ribamar@google.com"), new Professor("Odair", 95, 19098765432, "odair@yahoo.com")];
   // professoresAlgebra: Professor[] = [new Professor("Carlos", 28, 16123456789, "carlos@hotmail.com"), new Professor("José", 33, 16123456789, "jose@hotmail.com"), new Professor("Eduardo", 18, 19876541234, "eduardo@gmail.com")];
   // professoresAritmetica: Professor[] = [new Professor("Lucas", 40, 16123456789, "lucas@hotmail.com"), new Professor("Leandro", 38, 16123456789, "leandro@hotmail.com")];
@@ -22,26 +24,27 @@ export class MatematicaComponent implements OnInit {
   // ];
   // materia = this.materias.find(m => m.nome == 'Geometria');
 
+  temas: any[] = [];
+  tema: Tema | undefined = new Tema();
+  temaSelecionado: string | undefined = '';
+  professores: Professor[] = [];
 
-  disciplina: Disciplina | undefined = new Disciplina();
-  temas: Tema[] | undefined = [];
-
-  constructor(private disciplinaService: DisciplinaService) { }
+  constructor(private temaService: TemaService, 
+              private professorService: ProfessorService) { }
 
   ngOnInit(): void {
-    this.disciplinaService.GetById('11687CCF-728E-4E46-B8F1-96B4E8EAB49D').subscribe(resultado => {
-      this.disciplina = resultado;
-      this.temas = resultado.Temas;
+    this.temaService.GetByDisciplinaId('11687CCF-728E-4E46-B8F1-96B4E8EAB49D').subscribe(resultado => {
+      this.temas = resultado;
+      this.tema = resultado.find(t => t.nome == this.temaSelecionado);
     })
-    console.log(this.disciplina);
   }
 
-  alteraMateria(tema: string){
-    this.temaSelecionado = tema;
-    this.tema = this.disciplina?.Temas.find(t => t.Nome == tema);
-    console.log(this.materiaSelecionada);
-    console.log(this.materia);
+  alteraTema(temaSelecionado: string){
+    this.tema = this.temas.find(t => t.nome == temaSelecionado);
+    this.temaSelecionado = this.tema?.nome;
   }
 
-
+  selecionado(temaSelecionado: string): boolean{
+    return temaSelecionado == this.temaSelecionado;  
+  }
 }

@@ -19,33 +19,22 @@ console.log("opa")
 -->
 
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="container">
-                <p class="navbar-educai" [routerLink]="['']">
-                    <img src="../../assets/images/Logo__TCC.png " width="45px" height="42px" alt="">
-                    E D U C A Í</p>
-                <p class="navbar-login" [routerLink]="['/login']">Login</p>
-                <p class="navbar-cadastro" [routerLink]="['/cadastro']">Cadastre-se</p>
-            </div>
-        </nav>
-    </header>
     <main>
         <div class="sobreosite container">
             <!--
             <img src="assets/images/Logo_TCC.png" alt="">
             -->
             <div>
-                <h1 style="padding-top: 100px;">SOBRE O EDUCAÍ</h1>
-                <p style="text-align: justify;">O EDUCAÍ é um site de... </p>
+                <h1 style="margin-top: 3%;">SOBRE O EDUCAÍ</h1>
+                <p style="text-align: justify;">O EDUCAÍ é um site onde você encontra os professores mais capacitados para auxiliar no seu aprendizado</p>
             </div>
+            <h3>Nossas Disciplinas</h3>
         </div>
-
         <div class="container text-center icones">
             <div class="row row-cols-2">
                 <div class="col">
                     <img src="assets/images/img1.png" alt="">
-                    <p class="title_resumo"><b>Cálculo</b></p>
+                    <p class="title_resumo"><b>Matemática</b></p>
                 </div>
                 <div class="col">
                     <img src="assets/images/img2.png" alt="">
@@ -97,52 +86,6 @@ console.log("opa")
             <p class="btn btn-primary btn-lg" [routerLink]="['/login']">ENTRAR</p>
         </div>
     </main>
-
-    <div class="info_educai">
-        <div class="row">
-            <div class="col">
-                <h4>
-                    <p>
-                        <img src="../../assets/images/Logo__TCC.png " width="45px" height="42px" alt="">
-                        E D U C A I 
-                    </p>
-                </h4>
-                <p style="color: rgb(202, 197, 197);">
-                    Desenvolvido por Equipe Autônoma
-                </p>
-            </div>
-            <div class="col">
-                <p>
-                    <a href="https://www.facebook.com/EtecRP" target="_blank">
-                        <img src="../../assets/images/fbicon.png" alt="">
-                    </a>
-                </p>
-                <p>
-                    <a href="https://www.youtube.com/watch?v=LAbnr1jTtI8" target="_blank">
-                        <img src="../../assets/images/wppicon.png" alt="">
-                    </a>
-                </p>
-            </div>
-            <div class="col">
-                <h4>
-                    <p>Fale Conosco
-
-                    </p>
-                </h4>
-                <div style="color: rgb(202, 197, 197)">
-                    <p>Alisson Ranulpho</p>
-                    <p>Arthur Reinaldo</p>
-                    <p>Edgard Batista</p>
-                    <p>Victor Campos</p>
-                    <p>Pedro Francis</p>
-                    <p>Pedro Lucas</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p class="footer">&copy; SITE TCC | ETEC</p>
-    </footer>
 </body>
 
 </html>

@@ -19,6 +19,8 @@ import { MateriaComponent } from './aulas/materia/materia.component';
 import { NovoprofessorComponent } from './aulas/novoprofessor/novoprofessor.component';
 import { DisciplinaService } from './services/disciplina.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TemaService } from './services/tema.service';
+import { ProfessorService } from './services/professor.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     CarouselModule
   ],
-  providers: [AuthService, DisciplinaService, HttpClientModule],
+  providers: [AuthService, DisciplinaService, TemaService, ProfessorService, HttpClientModule],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA

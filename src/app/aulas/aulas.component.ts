@@ -13,11 +13,11 @@ export class AulasComponent implements OnInit {
   constructor(private disciplinaService: DisciplinaService) { }
 
   ngOnInit(): void {
-    this.disciplinaService.GetAll().subscribe(resultado => {
-      this.disciplinas = resultado;
-      console.log(this.disciplinas);
-      console.log('teste');
-    })
+    // this.disciplinaService.GetAll().subscribe(resultado => {
+    //   this.disciplinas = resultado;
+    //   console.log(this.disciplinas);
+    //   console.log('teste');
+    //})
   }
 
 }

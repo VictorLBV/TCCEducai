@@ -5,35 +5,81 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
 
-
-<!--<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container-fluid">
-            <a class="navbar-brand" [routerLink]="['']">E D U C A Í</a>
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarColor02" style="">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" [routerLink]="['/cadastro']">Cadastre-se</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" [routerLink]="['/login']">Login</a>
-                    </li>
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
-                </form>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-part-1">
+                    <p class="navbar-educai" [routerLink]="['']">
+                        <img src="../../assets/images/Logo__TCC.png " width="45px" height="42px" alt="">
+                        E D U C A Í</p>
+                    <p class="navbar-aulas" [routerLink]="['/aulas']">Aulas</p>
+                </div>
+                <div class="nav-part-2">
+                    <div *ngIf="usuarioEstaLogado()" style="display:flex;">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                {{usuarioLogado}}
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" (click)="deslogar()">Sair</a></li>
+                            </ul>
+                          </div>
+                    </div>
+                    <div *ngIf="!usuarioEstaLogado()" style="display:flex; width: 100%; justify-content: end">
+                        <span class="navbar-login" [routerLink]="['/login']">Login</span>
+                        <span class="navbar-cadastro" [routerLink]="['/cadastro']">Seja um professor!</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </nav>
-</header>
--->
-
-
+        </nav>
+    </header>
+</body>
 
 <router-outlet></router-outlet>
+
+<div class="info_educai">
+    <div class="row">
+        <div class="col">
+            <h4>
+                <p>
+                    <img src="../../assets/images/Logo__TCC.png " width="45px" height="42px" alt="">
+                    E D U C A Í 
+                </p>
+            </h4>
+            <p style="color: rgb(202, 197, 197);">
+                Desenvolvido por Equipe Autônoma
+            </p>
+        </div>
+        <div class="col">
+            <p>
+                <a href="https://www.facebook.com/EtecRP" target="_blank">
+                    <img src="../../assets/images/fbicon.png" alt="">
+                </a>
+            </p>
+            <p>
+                <a href="https://web.whatsapp.com/" target="_blank">
+                    <img src="../../assets/images/wppicon.png" alt="">
+                </a>
+            </p>
+        </div>
+        <div class="col">
+            <h4>
+                <p>Fale Conosco
+
+                </p>
+            </h4>
+            <div style="color: rgb(202, 197, 197); display: flex; flex-direction: column;">
+                <span>Alisson Ranulpho</span>
+                <span>Arthur Reinaldo</span>
+                <span>Edgard Batista</span>
+                <span>Victor Campos</span>
+                <span>Pedro Francis</span>
+                <span>Pedro Lucas</span>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p class="footer">&copy; SITE TCC | ETEC</p>
+</footer>

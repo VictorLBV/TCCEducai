@@ -1,13 +1,9 @@
 export class Professor {
-    nome: string;
-    idade: number;
-    telefone: number;
-    email: string;
+    id: string = '';
+    nome: string = '';
+    email: string = '';
+    dataNascimento: string = '';
+    telefone: number = 0;
 
-    constructor(nome: string, idade: number, telefone: number, email: string) {
-        this.nome = nome;
-        this.idade = idade;
-        this.telefone = telefone;
-        this.email = email;
-    }
+    constructor() {}
 }

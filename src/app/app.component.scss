@@ -1,0 +1,94 @@
+body {
+    font-family: Montserrat;
+}
+
+.navbar {
+    background: rgb(53, 53, 187);
+    color: white;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.nav-part-1{
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: center;
+    width: 50%;
+}
+
+.nav-part-2{
+    display: flex; 
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;    
+    width: 50%;
+}
+
+.navbar-login {
+    cursor: pointer;
+    font-size: 150%;
+}
+
+.navbar-login:hover {
+    color: orange;
+    transition: 0.2s;
+}
+
+.navbar-aulas {
+    cursor: pointer;
+    background: rgba(255, 1, 1, 0.838);
+    border-radius: 60px;
+    width: 20%;
+    height: 45%;
+    text-align: center;
+}
+
+.navbar-aulas:hover {
+    background: rgba(255, 1, 1, 0.701);
+    color: white;
+    transition: 0.5s;
+}
+
+.navbar-educai {
+    cursor: pointer;
+    font-size: 250%;
+    padding-right: 6%;
+}
+
+.navbar-educai:hover {
+    transition: 0.7s;
+    color: orange;
+}
+
+.navbar-cadastro {
+    cursor: pointer;
+    background: rgba(255, 166, 0, 0.963);
+    width: 40%;
+    height: 45%;
+    margin-left: 3%;
+    text-align: center;
+    border-radius: 60px;
+}
+
+.navbar-cadastro:hover {
+    background: rgba(255, 166, 0, 0.813);
+    color: white;
+    transition: 0.5s;
+}
+
+.info_educai {
+    background-color: gray;
+    text-align: center;
+    padding-top: 1%;
+    color: white;
+}
+
+.footer {
+    font-size: 15px;
+    text-align: center;
+    background-color: gray;
+    line-height: 50px;
+    color: darkgrey;
+    margin-bottom: auto;
+}

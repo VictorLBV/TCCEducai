@@ -7,78 +7,38 @@
 </head>
 
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="container-fluid">
-        <li class="navbar-nav">
-          <p [routerLink]="['']">E D U C A Í</p>
-        </li>
-      </div>
-    </nav>
-  </header>
-
   <div>
     <div>
       <p class="voltar" [routerLink]="['/aulas']"><img src="../../../assets/images/back-icon.png" alt=""></p>
       <p class="titulo">HUMANAS</p>
       <div class="container materias-grid">
         <div class="row">
-          <div class="col-sm">
-            <p (click)="alteraMateria('Historia')">
+          <div class="col-sm" [ngStyle]="selecionado('História') ? {'background-color': 'orange' } : {}">
+            <p (click)="alteraTema('História')">
               Historia
             </p>
           </div>
-          <div class="col-sm">
-            <p (click)="alteraMateria('Filosofia')">
+          <div class="col-sm" [ngStyle]="selecionado('Filosofia') ? {'background-color': 'orange' } : {}">
+            <p (click)="alteraTema('Filosofia')">
               Filosofia
             </p>
           </div>
-          <div class="col-sm">
-            <p (click)="alteraMateria('Geografia')">
+          <div class="col-sm" [ngStyle]="selecionado('Geografia') ? {'background-color': 'orange' } : {}">
+            <p (click)="alteraTema('Geografia')">
               Geografia
             </p>
           </div>
         </div>
       </div>
-      <div *ngIf="materiaSelecionada == 'Historia'">
-        <app-materia [materia]="materia"></app-materia>
+      <div *ngIf="temaSelecionado == 'História'">
+        <app-materia [tema]="tema"></app-materia>
       </div>
-      <div *ngIf="materiaSelecionada == 'Filosofia'">
-        <app-materia [materia]="materia"></app-materia>
+      <div *ngIf="temaSelecionado == 'Filosofia'">
+        <app-materia [tema]="tema"></app-materia>
       </div>
-      <div *ngIf="materiaSelecionada == 'Geografia'">
-        <app-materia [materia]="materia"></app-materia>
-      </div>
-    </div>
-  </div>
-  <div class="info_educai">
-    <div class="row">
-      <div class="col">
-        <h4>
-          <p>E D U C A Í</p>
-        </h4>
-        <p></p>
-      </div>
-      <div class="col">
-        <p>
-          <a href="https://www.facebook.com/EtecRP" target="_blank">
-            <img src="../../assets/images/fbicon.png" alt="">
-          </a>
-          <a href="https://www.youtube.com/watch?v=LAbnr1jTtI8" target="_blank">
-            <img src="../../assets/images/wppicon.png" alt="">
-          </a>
-        </p>
-      </div>
-      <div class="col">
-        <h4>
-          <p>Fale Conosco</p>
-        </h4>
-        <p></p>
+      <div *ngIf="temaSelecionado == 'Geografia'">
+        <app-materia [tema]="tema"></app-materia>
       </div>
     </div>
   </div>
-  <footer>
-    <p class="footer">&copy; SITE TCC | ETEC</p>
-  </footer>
-
 </body>

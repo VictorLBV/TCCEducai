@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'educai_tcc.angular_26082002';
+  usuarioLogado: string | null  = '';
+
+  usuarioEstaLogado() : boolean{
+    this.usuarioLogado = localStorage.getItem('email');
+    return this.usuarioLogado != null;
+  };
+
+  deslogar(){
+    localStorage.removeItem('email');
+  }
 }

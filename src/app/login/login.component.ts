@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Login } from '../Models/login';
+import { Professor } from '../Models/professor';
+import { ProfessorService } from '../services/professor.service';
 import { AuthService } from './auth.service';
 import { Usuario } from './usuario';
 
@@ -10,16 +14,31 @@ import { Usuario } from './usuario';
 })
 export class LoginComponent implements OnInit {
 
-  usuario: Usuario = new Usuario();
+  login = new Login();
+  professor = new Professor();
 
-
-  constructor(private authService: AuthService) { }
+  constructor(private professorService: ProfessorService,
+    private router: Router,) { }
 
   ngOnInit(): void {
   } 
 
-  fazerLogin(){
-    //console.log(this.usuario);
-    this.authService.fazerLogin(this.usuario)
+  logar(){
+    console.log(this.login.email, this.login.senha);
+
+    this.professorService.Logar(this.login).subscribe(resultado => {
+      this.professor = resultado;
+      localStorage.setItem('email', this.login.email);
+      localStorage.setItem('id', this.professor.id);
+      this.router.navigate(['/'])
+    },
+    (err) => {
+      if(err.status === 400){
+        alert('Usuário ou senha inválido');
+      };
+      if(err.status === 500){
+        alert('Erro no servidor da API');
+      };
+    });
   }
 }
