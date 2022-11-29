@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Página Home</title>
+    <meta charset="utf-8">
+</head>
+
+<!--
+<script type="module">
+import {Modal} from 'bootstrap'
+let myModal = new Modal(document.getElementById('myModal'));
+myModal.show();
+
+console.log(myModal);
+console.log("opa")
+
+</script>
+-->
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <li class="navbar-nav">
+                    <p [routerLink]="['']">E D U C A Í</p>
+                </li>
+            </div>
+        </nav>
+    </header>
+    <h1 class="titulo">MATÉRIAS</h1>
+    <hr>
+    <main class="cards-teste">
+        <div class="container text-center cards-main">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="width: 16rem;">
+                        <img src="assets/images/cards/fisica.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Matemática</h5>
+                            <p class="card-text">Ciência que estuda, por método dedutivo, objetos abstratos (números, figuras, funções) e as relações existentes entre eles.</p>
+                            <p class="btn btn-outline-primary" [routerLink]="['/matematica']">Veja mais</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 16rem;">
+                        <img src="assets/images/cards/portugues_novo.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Linguagens</h5>
+                            <p class="card-text">Formas de se comunicar, como Língua Portuguesa, Literatura, Língua Estrangeira, Tecnologias da Informação e Comunicação.</p>
+                            <p class="btn btn-outline-primary" [routerLink]="['/linguagens']">Veja mais</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 16rem;">
+                        <img src="assets/images/cards/natureza1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ciências da natureza</h5>
+                            <p class="card-text">Ciências da Natureza são um conjunto de disciplinas ao estudo do meio ambiente. E fundamental pra educação ambiental.</p>
+                            <p class="btn btn-outline-primary" [routerLink]="['/natureza']">Veja mais</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 16rem;">
+                        <img src="assets/images/cards/humanas4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ciências Humanas</h5>
+                            <p class="card-text">São disciplinas do conhecimento criteriosamente organizados da produção criativa humana.</p>
+                            <p class="btn btn-outline-primary" [routerLink]="['/humanas']">Veja mais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="info_educai">
+        <div class="row">
+            <div class="col">
+                <h4>
+                    <p>E D U C A Í</p>
+                </h4>
+                <p></p>
+            </div>
+            <div class="col">
+                <p>
+                    <a href="https://www.facebook.com/EtecRP" target="_blank">
+                        <img src="../../assets/images/fbicon.png" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=LAbnr1jTtI8" target="_blank">
+                        <img src="../../assets/images/wppicon.png" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="col">
+                <h4>
+                    <p>Fale Conosco</p>
+                </h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="footer">&copy; SITE TCC | ETEC</p>
+    </footer>
+</body>
+
+</html>

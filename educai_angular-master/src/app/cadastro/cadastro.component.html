@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Página Cadastro</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <li class="navbar-nav">
+                    <p [routerLink]="['']">E D U C A Í</p>
+                </li>
+            </div>
+        </nav>
+    </header>
+    <form action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <img src="assets/images/cards/img_avatar2.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container cadastro">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter a Username" name="uname" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Enter your Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter a Password" name="psw" required>
+
+            <label for="psw"><b>Confirm Password</b></label>
+            <input type="password" placeholder="Enter a Password" name="psw" required>
+
+            <button type="submit">Create a Record</button>
+        </div>
+    </form>
+    <br><br>    
+    <div class="info_educai">
+        <div class="row">
+            <div class="col">
+                <h4>
+                    <p>E D U C A Í</p>
+                </h4>
+                <p></p>
+            </div>
+            <div class="col">
+                <p>
+                    <a href="https://www.facebook.com/EtecRP">
+                        <img src="../../assets/images/fbicon.png" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=LAbnr1jTtI8">
+                        <img src="../../assets/images/wppicon.png" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="col">
+                <h4>
+                    <p>Fale Conosco</p>
+                </h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="footer">&copy; SITE TCC | ETEC</p>
+    </footer>
+</body>
+
+</html>

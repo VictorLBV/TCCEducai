@@ -1,0 +1,50 @@
+<div>
+    A materia é: {{materia.nome}}
+</div>
+<button class="botaocriar-usuario">
+    <p [routerLink]="['/novoprofessor']">Quero ensinar</p>
+</button><br><br>
+<div *ngFor="let professor of materia.professores; let i = index;" class="lista">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" attr.data-bs-target="#collapse_{{i}}" aria-expanded="false">
+                    {{professor.nome}}
+                </button>
+            </h2>
+            <div id="collapse_{{i}}" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <img src="../../../assets/images/user-icon.png" alt="">
+                    <p><b>Nome completo:</b> {{professor.nome}}</p>
+                    <p><b>Idade:</b> {{professor.idade}}</p>
+                    <p><b>Telefone para contato:</b> {{professor.telefone}}</p>
+                    <p><b>Email profissonal:</b> {{professor.email}}</p>
+                    <button class="botaoexcluir-usuario">Excluir</button>
+                    <button class="botaoalterar-usuario">Alterar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="video">
+    <p style="text-align:center;">Alguns Conteúdos</p>
+    <iframe
+    width="854px"
+    height="480px"
+    src="https://www.youtube.com/watch?v=JRsDEkW_6O0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen="">
+  </iframe>
+  <br>
+  <iframe
+    width="854px"
+    height="480px"
+    src="https://www.youtube.com/watch?v=JRsDEkW_6O0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen="">
+  </iframe>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>

@@ -1,0 +1,113 @@
+body {
+    font-family: Montserrat;
+}
+
+.navbar {
+    background: rgb(53, 53, 187);
+    color: white;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+.navbar-login {
+    cursor: pointer;
+    font-size: 150%;
+}
+
+.navbar-login:hover {
+    color: orange;
+    transition: 0.2s;
+}
+
+.navbar-educai {
+    border-top: 3px solid;
+    cursor: pointer;
+    font-size: 250%;
+}
+
+.navbar-educai:hover {
+    transition: 0.7s;
+    color: orange;
+}
+
+.navbar-cadastro {
+    cursor: pointer;
+    background: orange;
+    border-radius: 60px;
+}
+
+.navbar-cadastro:hover {
+    background: white;
+    color: orange;
+    transition: 0.5s;
+}
+
+.sobreosite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 70px;
+}
+
+.title_resumo {
+    font-size: 24px;
+}
+
+.icones {
+    border: 2px solid darkblue;
+    border-radius: 25px;
+    height: 50%;
+}
+
+.card-background {
+    background: orange;
+}
+
+.botao_home {
+    text-align: center;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.educai {
+    border: 30px solid orange;
+    background: orange;
+    height: 320px;
+    border-radius: 25px;
+}
+
+.sobre-educai {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.card {
+    background: black;
+}
+
+.card:hover {
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.info_educai {
+    background-color: gray;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    color: white;
+}
+
+.footer {
+    font-size: 15px;
+    text-align: center;
+    background-color: gray;
+    line-height: 50px;
+    color: darkgrey;
+    margin-bottom: auto;
+}

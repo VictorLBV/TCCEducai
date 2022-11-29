@@ -1,0 +1,59 @@
+body{
+  font-family: Montserrat;
+}
+
+.navbar{
+  background: rgb(53, 53, 187);
+  color: white;
+  font-size: 200%;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.navbar-nav{
+  margin: 0 auto;
+  border-top: 3px solid;
+  cursor: pointer;
+}
+
+.navbar-nav:hover{
+  transition: 0.7s;
+  color: orange;
+}
+
+
+.quadro{
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.11);
+  padding-left: 4%;
+  padding-top: 2%;
+}
+
+.quadro .conteudo-quadro{
+  width: 95%;
+  height: 80%;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 3px 3px 5px black;
+}
+
+.materias-grid{
+  text-align: center;
+  border-bottom: 5px solid darkblue;
+}
+
+.col-sm:hover{
+  color: rgb(0, 195, 255);
+  border-bottom: 1px solid rgb(0, 195, 255);
+}
+
+h1{
+  text-align: center;
+  color: black;
+  font-size: 60px;
+}

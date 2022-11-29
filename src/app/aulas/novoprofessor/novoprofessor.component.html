@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Novo Professor</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <li class="navbar-nav">
+                    <p [routerLink]="['']">E D U C A Í</p>
+                </li>
+            </div>
+        </nav>
+    </header>
+    <p class="voltar" [routerLink]="['/matematica']"><img src="../../../assets/images/back-icon.png" alt=""></p>
+    <form action="/action_page.php" method="post">
+        <div class="imgcontainer">
+            <img src="assets/images/cards/user_professor.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container cadastro">
+            <label for="uname"><b>Nome</b></label>
+            <input type="text" placeholder="Digite seu nome" name="uname" required>
+
+            <label for="idade"><b>Idade</b></label>
+            <input type="number" placeholder="Digite sua idade" name="idade" required>
+
+            <label for="telefone"><b>Telefone</b></label>
+            <input type="tel" placeholder="Digite seu telefone" name="telefone" required>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" placeholder="Digite seu email" name="email" required>
+
+            <button type="submit" [routerLink]="['/matematica']">Enviar formulário de cadastro</button>
+        </div>
+    </form>
+    <br><br>    
+    <div class="info_educai">
+        <div class="row">
+            <div class="col">
+                <h4>
+                    <p>E D U C A Í</p>
+                </h4>
+                <p></p>
+            </div>
+            <div class="col">
+                <p>
+                    <a href="https://www.facebook.com/EtecRP" target="_blank">
+                        <img src="../../assets/images/fbicon.png" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=LAbnr1jTtI8" target="_blank">
+                        <img src="../../assets/images/wppicon.png" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="col">
+                <h4>
+                    <p>Fale Conosco</p>
+                </h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="footer">&copy; SITE TCC | ETEC</p>
+    </footer>
+</body>
+
+</html>

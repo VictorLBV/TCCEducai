@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+  font-family: Montserrat;
+}
+
+body {
+  margin: 0;
+
+}
+
+.navbar{
+  background: rgb(53, 53, 187);
+  color: white;
+  font-size: 200%;
+  line-height: 50px;
+  text-decoration: none;
+}
+
+.navbar-nav{
+  margin: 0 auto;
+  border-top: 3px solid;
+  cursor: pointer;
+}
+
+.navbar-nav:hover{
+  transition: 0.7s;
+  color: orange;
+}
+
+
+.titulo {
+  text-align: center;
+  font-size: 500%;
+  padding-top: 1%;
+}
+
+.botao-seta {
+  width: 70%;
+  height: 70%;
+  padding-top: 75%;
+}
+
+.botao-seta :hover {
+  opacity: 0.8;
+}
+
+.card {
+  background: darkgray;
+}
+
+.cards-teste {
+  padding-top: 2%;
+  padding-bottom: 6%;
+}
+
+.info_educai{
+  background-color: gray;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 50px;
+  color: white;
+}
+
+.footer{
+  font-size: 15px;
+  text-align: center;
+  background-color: gray;
+  line-height: 50px;
+  color: darkgrey;
+  margin-bottom: auto;
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Página Home</title>
+    <meta charset="utf-8">
+</head>
+
+<!--
+<script type="module">
+import {Modal} from 'bootstrap'
+let myModal = new Modal(document.getElementById('myModal'));
+myModal.show();
+
+console.log(myModal);
+console.log("opa")
+
+</script>
+-->
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container-fluid">
+                <li class="navbar-nav">
+                    <p [routerLink]="['']">E D U C A Í</p>
+                </li>
+            </div>
+        </nav>
+    </header>
+    <h1 class="titulo">MATÉRIAS</h1>
+    <hr>
+    <main class="cards-teste">
+        <div class="container text-center cards-main">
+            <div class="row">
+                <!--
+                <div class="col">
+                    <a href="">
+                        <img class="botao-seta" src="assets/images/arrow-left-circle.svg" alt="">
+                    </a>
+                </div>
+                -->
+
+                <div class="col">
+                    <div class="card" style="width: 16rem;">
+                        <img src="assets/images/cards/matemática.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Ciências Humanas</h5>
+                            <p class="card-text">As ciências humanas são um conjunto de conhecimentos que tem como objetivo o estudo do homem como ser social.</p>
+                            <a [routerLink]="['/aulas-detalhes']" class="btn btn-dark botao-card">Saiba mais.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 16rem;">
+                        <img src="assets/images/cards/matemática.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Exatas</h5>
+                            <p class="card-text">As Ciências Exatas são áreas de campos do estudo voltados para o cálculo, medições e expressões matemáticas.</p>
+                            <a [routerLink]="['/aulas-detalhes']" class="btn btn-dark botao-card">Saiba mais.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="width: 16rem;">
+                        <img src="assets/images/cards/matemática.jfif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Ciências da Natureza</h5>
+                          <p class="card-text">As Ciências da Natureza são um conjunto de disciplinas que se dedicam ao estudo do meio ambiente e temas gerais e específicos.</p>
+                          <a [routerLink]="['/aulas-detalhes']" class="btn btn-dark botao-card">Saiba mais.</a>
+                      </div>
+                    </div>
+                </div>
+                <div class="col">
+                  <div class="card" style="width: 16rem;">
+                      <img src="assets/images/cards/matemática.jfif" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Linguagens</h5>
+                        <p class="card-text">A linguagem é o mecanismo que utilizamos para transmitir nossos conceitos, ideias e sentimentos.</p>
+                        <a [routerLink]="['/aulas-detalhes']" class="btn btn-dark botao-card">Saiba mais.</a>
+                    </div>
+                  </div>
+                </div>
+                <!--
+                <div class="col">
+                    <a href="">
+                        <img class="botao-seta" src="assets/images/arrow-right-circle.svg" alt="">
+                    </a>
+                </div>
+                -->
+            </div>
+        </div>
+    </main>
+    <div class="info_educai">
+        <div class="row">
+            <div class="col">
+                <h4>
+                    <p>E D U C A Í</p>
+                </h4>
+                <p></p>
+            </div>
+            <div class="col">
+                <p>
+                    <a href="https://www.facebook.com/EtecRP">
+                        <img src="../../assets/images/fbicon.png" alt="">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=LAbnr1jTtI8">
+                        <img src="../../assets/images/wppicon.png" alt="">
+                    </a>
+                </p>
+            </div>
+            <div class="col">
+                <h4>
+                    <p>Fale Conosco</p>
+                </h4>
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p class="footer">&copy; SITE TCC | ETEC</p>
+    </footer>
+</body>
+
+</html>

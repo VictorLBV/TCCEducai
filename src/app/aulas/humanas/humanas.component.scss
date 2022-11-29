@@ -1,0 +1,70 @@
+html{
+    height: 100%;
+}
+
+body{
+    font-family: Montserrat;
+    background-color: rgba(0, 0, 0, 0.11);
+    min-height: 100vh;
+}
+
+.navbar{
+    background: rgb(53, 53, 187);
+    color: white;
+    font-size: 200%;
+    line-height: 50px;
+    text-decoration: none;
+  }
+  
+  .navbar-nav{
+    margin: 0 auto;
+    border-top: 3px solid;
+    cursor: pointer;
+  }
+  
+  .navbar-nav:hover{
+    transition: 0.7s;
+    color: orange;
+  }
+
+.voltar{
+    cursor: pointer;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 50px;
+}
+
+.materias-grid{
+    text-align: center;
+    border-bottom: 5px solid darkblue;
+    cursor: pointer;
+}
+
+.col-sm:hover{
+    color: rgb(0, 195, 255);
+}
+
+h1{
+    text-align: center;
+    color: black;
+    font-size: 60px;
+}
+
+.info_educai{
+    background-color: gray;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 50px;
+    color: white;
+  }
+
+.footer{
+    font-size: 15px;
+    text-align: center;
+    background-color: gray;
+    line-height: 50px;
+    color: darkgrey;
+    margin-bottom: auto;
+  }

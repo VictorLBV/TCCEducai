@@ -1,0 +1,50 @@
+.botaocriar-usuario{
+    margin-left: 78%;
+    border-radius: 10px;
+    border: orange;
+    background: orange;
+    color: white;
+    box-shadow: 0px 12px 20px -15px black;
+}
+
+.botaoexcluir-usuario{
+    border-radius: 10px;
+    background: red;
+    border: red;
+    color: white;
+    float: right;
+    box-shadow: 0px 12px 20px -15px black;
+}
+
+.botaoalterar-usuario{
+    border-radius: 10px;
+    background: yellow;
+    border: yellow;
+    color: white;
+    float: right;
+    box-shadow: 0px 12px 20px -15px black;
+}
+
+.accordion-item{
+    width: 90%;
+    border: none;
+    margin-left: 5%;
+    padding-bottom: 10px;
+    box-shadow: 0px 12px 20px -15px black;   
+}
+
+.accordion-body{
+    background: white;
+}
+
+.video{
+    display: flex;
+    flex-direction: column;
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+
