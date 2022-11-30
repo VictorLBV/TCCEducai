@@ -8,6 +8,10 @@
 
 <body>
   <div>
+    <br>
+    <div *ngIf="!usuarioEstaLogado()" style="text-align:center; font-size: 200%; color: red; font-weight: bold;">
+      <p>É necessário logar para dar aulas!</p>
+    </div>
     <div>
       <p class="voltar" [routerLink]="['/aulas']"><img src="../../../assets/images/back-icon.png" alt=""></p>
       <p class="titulo">MATEMÁTICA</p>

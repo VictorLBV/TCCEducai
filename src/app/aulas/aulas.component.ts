@@ -19,5 +19,4 @@ export class AulasComponent implements OnInit {
     //   console.log('teste');
     //})
   }
-
 }

@@ -32,6 +32,9 @@ export class MatematicaComponent implements OnInit {
   constructor(private temaService: TemaService, 
               private professorService: ProfessorService) { }
 
+  usuarioLogado: string | null = '';
+  idUsuarioLogado = localStorage.getItem('id');
+
   ngOnInit(): void {
     this.temaService.GetByDisciplinaId('11687CCF-728E-4E46-B8F1-96B4E8EAB49D').subscribe(resultado => {
       this.temas = resultado;
@@ -47,4 +50,9 @@ export class MatematicaComponent implements OnInit {
   selecionado(temaSelecionado: string): boolean{
     return temaSelecionado == this.temaSelecionado;  
   }
+
+  usuarioEstaLogado() : boolean{
+    this.usuarioLogado = localStorage.getItem('email');
+    return this.usuarioLogado != null;
+  };
 }
