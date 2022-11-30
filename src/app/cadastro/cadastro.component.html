@@ -7,25 +7,28 @@
 </head>
 
 <body>
-    <form action="/action_page.php" method="post">
+    <form [formGroup]="professor" (ngSubmit)="cadastrar()">
         <div class="imgcontainer">
             <img src="assets/images/cards/user_female.png" alt="Avatar" class="avatar">
         </div>
 
         <div class="container cadastro">
-            <label for="uname"><b>Nome de Usúario</b></label>
-            <input type="text" placeholder="Digite o nome de usúario" name="uname" required>
+            <label for="uname"><b>Nome</b></label>
+            <input type="text" formControlName="nome" placeholder="Digite seu nome" required>
 
             <label for="email"><b>Email</b></label>
-            <input type="email" placeholder="Digite o seu email" name="email" required>
+            <input type="email" formControlName="email" placeholder="Digite seu email" required>
 
             <label for="psw"><b>Senha</b></label>
-            <input type="password" placeholder="Digite sua senha" name="psw" required>
+            <input type="password" formControlName="senha" placeholder="Digite sua senha" required>
 
-            <label for="psw"><b>Corfime sua senha</b></label>
-            <input type="password" placeholder="Digite sua senha novamente" name="psw" required>
+            <label for="dta"><b>Data de Nascimento</b></label>
+            <input type="date" formControlName="dataNascimento" placeholder="Digite sua data de nascimento" required>
 
-            <button type="submit">Criar conta</button>
+            <label for="tel"><b>Telefone</b></label>
+            <input type="text" formControlName="telefone" placeholder="Digite seu telefone" required>
+
+            <button type="submit">Cadastrar</button>
         </div>
     </form>
     <br><br>    

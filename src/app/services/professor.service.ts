@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Login } from '../Models/login';
-import { Professor } from '../Models/professor';
+import { CadastroProfessor, Professor } from '../Models/professor';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -32,4 +32,9 @@ export class ProfessorService {
   PararEnsinarTema(professorId: string | null, temaId: string | undefined) : Observable<any>{
     return this.http.delete<any>(`http://localhost:5000/desatribuir-tema/${professorId}/${temaId}`, httpOptions);
   };
+
+  Cadastrar(professor: CadastroProfessor) : Observable<CadastroProfessor>{
+    return this.http.post<CadastroProfessor>(
+      `http://localhost:5000/cadastrar`, professor, httpOptions);
+  }
 }

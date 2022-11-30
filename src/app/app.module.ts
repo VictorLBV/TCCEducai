@@ -9,7 +9,7 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { AulasComponent } from './aulas/aulas.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthService } from './login/auth.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CarouselModule } from './carousel/carousel.module';
 import { MatematicaComponent } from './aulas/matematica/matematica.component';
 import { LinguagensComponent } from './aulas/linguagens/linguagens.component';
@@ -40,6 +40,7 @@ import { ProfessorService } from './services/professor.service';
     HttpClientModule,
     AppRoutingModule,
     HomeModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     FormsModule,
     CarouselModule

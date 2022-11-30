@@ -7,3 +7,13 @@ export class Professor {
 
     constructor() {}
 }
+
+export class CadastroProfessor {
+    nome: string = '';
+    email: string = '';
+    senha: string = '';
+    dataNascimento: string = '';
+    telefone: number = 0;
+
+    constructor() {}
+}
