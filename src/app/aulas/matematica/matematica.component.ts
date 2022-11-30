@@ -54,5 +54,5 @@ export class MatematicaComponent implements OnInit {
   usuarioEstaLogado() : boolean{
     this.usuarioLogado = localStorage.getItem('email');
     return this.usuarioLogado != null;
-  };
+  }
 }
