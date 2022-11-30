@@ -30,15 +30,18 @@ export class LoginComponent implements OnInit {
       this.professor = resultado;
       localStorage.setItem('email', this.login.email);
       localStorage.setItem('id', this.professor.id);
-      this.router.navigate(['/'])
+      this.router.navigate(['/aulas'])
     },
     (err) => {
       if(err.status === 400){
         alert('Usuário ou senha inválido');
-      };
-      if(err.status === 500){
+      }
+      else if(err.status === 500){
         alert('Erro no servidor da API');
-      };
+      }
+      else{
+        alert("Servidor fora do ar!")
+      }
     });
   }
 }

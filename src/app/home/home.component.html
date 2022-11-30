@@ -21,14 +21,13 @@ console.log("opa")
 <body>
     <main>
         <div class="sobreosite container">
-            <!--
-            <img src="assets/images/Logo_TCC.png" alt="">
-            -->
+            <img src="assets/images/LogoHome.png" alt="">          
             <div>
-                <h1 style="margin-top: 3%;">SOBRE O EDUCAÍ</h1>
-                <p style="text-align: justify;">O EDUCAÍ é um site onde você encontra os professores mais capacitados para auxiliar no seu aprendizado</p>
+                <!--<h1 style="margin-top: 3%;">SOBRE O SITE</h1>!-->
+                <h3 style="text-align: justify; font-size: 110%;">No EDUCAÍ onde você encontra os professores mais capacitados para auxiliar no seu aprendizado</h3>
             </div>
-            <h3>Nossas Disciplinas</h3>
+            <br><br>
+            <h2>Nossas Disciplinas</h2>
         </div>
         <div class="container text-center icones">
             <div class="row row-cols-2">
@@ -42,11 +41,11 @@ console.log("opa")
                 </div>
                 <div class="col">
                     <img src="assets/images/img3.png" alt="">
-                    <p class="title_resumo"><b>Ciências humanas</b></p>
+                    <p class="title_resumo"><b>Ciências Humanas</b></p>
                 </div>
                 <div class="col">
                     <img src="assets/images/img4.png" alt="">
-                    <p class="title_resumo"><b>Ciências da natureza</b></p>
+                    <p class="title_resumo"><b>Ciências da Natureza</b></p>
                 </div>
             </div>
         </div>
@@ -82,9 +81,22 @@ console.log("opa")
           </div>
         </div>
       </div>
-        <div class="botao_home">
-            <p class="btn btn-primary btn-lg" [routerLink]="['/login']">ENTRAR</p>
+      <br><br>
+      <p class="container" style="font-size: 200%; text-align: center;">
+        Quer mudanças? Sabe sobre algum assunto? Venha ensinar quem precisa,
+        venha ajudar quem procura conteúdo de qualidade.<br> 
+        <b style="font-size:120% ;">Faça a diferença!</b>
+      </p>
+        <div *ngIf="usuarioEstaLogado()" class="botao_home">
+            <p class="btn btn-primary btn-lg" [routerLink]="['/aulas']">
+              Quero dar aulas
+            </p>
         </div>
+        <div *ngIf="!usuarioEstaLogado()" class="botao_home">
+          <p class="btn btn-primary btn-lg" [routerLink]="['/login']">
+            Quero dar aulas
+          </p>
+      </div>
     </main>
 </body>
 

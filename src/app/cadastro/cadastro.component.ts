@@ -29,7 +29,7 @@ export class CadastroComponent implements OnInit {
   cadastrar(){
     const professor = this.professor.value;
     this.professorService.Cadastrar(professor).subscribe(resultado => {
-      this.router.navigate(['/']);
+      this.router.navigate(['/login']);
       alert("Cadastro realizado com sucesso!");
     },
     (err) => {

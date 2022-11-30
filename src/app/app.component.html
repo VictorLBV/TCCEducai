@@ -10,9 +10,9 @@
         <nav class="navbar">
             <div class="container">
                 <div class="nav-part-1">
-                    <p class="navbar-educai" [routerLink]="['']">
-                        <img src="../../assets/images/Logo__TCC.png " width="45px" height="42px" alt="">
-                        E D U C A Í</p>
+                    <p class="navbar-educai" [routerLink]="['/']">
+                        <img src="../../assets/images/LogoNavbarBranco.png" width="150px" height="60px" alt="">
+                    </p>
                     <p class="navbar-aulas" [routerLink]="['/aulas']">Aulas</p>
                 </div>
                 <div class="nav-part-2">
@@ -28,7 +28,7 @@
                     </div>
                     <div *ngIf="!usuarioEstaLogado()" style="display:flex; width: 100%; justify-content: end">
                         <span class="navbar-login" [routerLink]="['/login']">Login</span>
-                        <span class="navbar-cadastro" [routerLink]="['/cadastro']">Seja um professor!</span>
+                        <span class="navbar-cadastro" [routerLink]="['/cadastro']">Seja um professor</span>
                     </div>
                 </div>
             </div>
@@ -43,8 +43,7 @@
         <div class="col">
             <h4>
                 <p>
-                    <img src="../../assets/images/Logo__TCC.png " width="45px" height="42px" alt="">
-                    E D U C A Í 
+                    <img src="../../assets/images/LogoNavbarBranco.png" width="150px" height="60px" alt="">
                 </p>
             </h4>
             <p style="color: rgb(202, 197, 197);">

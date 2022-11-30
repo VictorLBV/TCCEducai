@@ -29,14 +29,7 @@
                 required>
 
             <button type="submit" (click)="logar()">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
-
-        <div class="container" style="background-color:#d6cece">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
+            <p [routerLink]="['/cadastro']">Não tem login?<b style="text-decoration:underline; cursor:pointer; color: red;"> Faça o Cadastro!</b></p>
         </div>
     </form>
     <br><br><br>

@@ -13,7 +13,7 @@
         </div>
 
         <div class="container cadastro">
-            <label for="uname"><b>Nome</b></label>
+            <label for="uname"><b>Nome Completo</b></label>
             <input type="text" formControlName="nome" placeholder="Digite seu nome" required>
 
             <label for="email"><b>Email</b></label>
@@ -26,9 +26,11 @@
             <input type="date" formControlName="dataNascimento" placeholder="Digite sua data de nascimento" required>
 
             <label for="tel"><b>Telefone</b></label>
-            <input type="text" formControlName="telefone" placeholder="Digite seu telefone" required>
+            <input type="text" formControlName="telefone" placeholder="Digite apenas o número" required>
 
             <button type="submit">Cadastrar</button>
+
+            <p [routerLink]="['/login']">Já tem um cadastro?<b style="text-decoration:underline; cursor:pointer; color: red;"> Faça Login!</b></p>
         </div>
     </form>
     <br><br>    
